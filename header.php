@@ -2,7 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Title</title>
+
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 
