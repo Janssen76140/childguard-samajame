@@ -14,8 +14,8 @@
             <img class="logo" src="asset/img/logo.png" alt="Logo ChildGuard">
                 <nav class="navbarHeader">
                     <ul>
-                        <li><a href="#" class="link connectHeader">Connexion</a></li>
-                        <li><a href="#" class="link signUpHeader">Inscription</a></li>
+                        <li><a href="#" class="lien connexionHeader">Connexion</a></li>
+                        <li><a href="#" class="lien inscriptionHeader">Inscription</a></li>
                     </ul>
                 </nav>
         </div>

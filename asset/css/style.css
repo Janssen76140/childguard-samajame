@@ -11,7 +11,7 @@
 
 }
 
-.link {
+.lien {
     float: left;
     margin-top: 50px;
     color: black;
@@ -19,15 +19,17 @@
     font-size: 1.3em;
 }
 
-.link:hover {
+.lien:hover {
     color: red;
 }
 
-.connectHeader {
+.connexionHeader {
     margin-left: 65%;
 }
 
-.signUpHeader {
+.inscriptionHeader {
     padding-left: 5%;
 }
+
+
 
