@@ -1,5 +1,7 @@
 <?php
 namespace App\Weblitzer;
+
+use App;
 /**
  * SINGLETON permet de recupere une instance sur l'ensemble de l'application est une seule fois
  * m'envoie tjrs la meme instance

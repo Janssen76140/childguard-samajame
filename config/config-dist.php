@@ -1,10 +1,10 @@
 <?php
 
 return array(
-    'db_name'   => '',
-    'db_user'   => '',
-    'db_pass'   => '',
-    'db_host'   => '',
+    'db_name'   => 'childguard_samajame',
+    'db_user'   => 'root',
+    'db_pass'   => 'root',
+    'db_host'   => 'localhost',
 
     'directory' => ''
 );

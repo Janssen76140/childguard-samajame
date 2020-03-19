@@ -4,115 +4,65 @@ namespace App\Service;
  *  class Form
  *  Permet de generer un formulaire
  */
-class Form
+
+class Validation
 {
-    protected $post;
-    protected $error;
+    protected $errors = array();
 
-    function __construct($error = array(),$method = 'post')
+    public function IsValid($errors)
     {
-        if($method == 'post') {
-            $this->post = $_POST;
-        } else {
-            $this->post = $_GET;
-        }
-        $this->error = $error;
-    }
-
-    /**
-     * @param $html string
-     * @return string
-     */
-    private function arround($html)
-    {
-        return '<div class="form-control">'.$html.'</div>';
-    }
-
-    /**
-     * @param $name string
-     * @return string
-     */
-    private function getValue($name,$data)
-    {
-        if(!empty($data)) {
-            return !empty($this->post[$name]) ? $this->post[$name] : $data ;
-        } else {
-            return !empty($this->post[$name]) ? $this->post[$name] : null ;
-        }
-
-    }
-    /**
-     * @param $name string
-     * @return string
-     */
-    public function input($name,$data = null)
-    {
-        return $this->arround('<input type="text" id="'.$name.'" name="'.$name.'" value="'.$this->getValue($name,$data).'">');
-    }
-
-    /**
-     * @param $name
-     * @param null $data
-     * @return string
-     */
-    public function textarea($name, $data = null)
-    {
-        return $this->arround('<textarea name="'.$name.'">'.$this->getValue($name,$data).'</textarea>');
-    }
-
-    /**
-     * @param $name string
-     * @param $value string
-     * @return string
-     */
-    public function submit($name = 'submitted',$value='Envoyer')
-    {
-        return '<input type="submit" name="'.$name.'" id="'.$name.'" value="'.$value.'">';
-    }
-
-    /**
-     * @param $name
-     * @return string|null
-     */
-    public function error($name)
-    {
-        if(!empty($this->error[$name])) {
-            return '<span class="error">'.$this->error[$name].'</span>';
-        }
-        return null;
-    }
-
-    /**
-     * @param $name
-     * @param $label valeur du label
-     * @return string
-     */
-    public function label($name,$label = null)
-    {
-        //$text = ($label === null) ? $name : $label;
-        return '<label for="'.$name.'">'.ucfirst($name).'</label>';
-    }
-
-    /**
-     * @param $name
-     * @param $entitys
-     * @param $column
-     * @param $data
-     * @return string
-     */
-    public function select($name, $entitys, $column, $data = '', $idd = 'id')
-    {
-        $html = '<select name="'.$name.'">';
-        foreach ($entitys as $entity) {
-            if(!empty($data) && $data == $entity->$idd){
-                $selected = ' selected="selected"';
-            } else {
-                $selected = '';
+        foreach ($errors as $key => $value) {
+            if(!empty($value)) {
+                return false;
             }
-            $html .= '<option value="'.$entity->$idd.'"'.$selected.'>'.$entity->$column.'</option>';
         }
-        $html .= '</select>';
-        return $html;
+        return true;
     }
+
+    /**
+     * emailValid
+     * @param email $email
+     * @return string $error
+     */
+
+    public function emailValid($email)
+    {
+        $error = '';
+        if(empty($email) || (filter_var($email, FILTER_VALIDATE_EMAIL)) === false) {
+            $error = 'Adresse email invalide.';
+        }
+        return $error;
+    }
+
+    /**
+     * textValid
+     * @param POST $text string
+     * @param title $title string
+     * @param min $min int
+     * @param max $max int
+     * @param empty $empty bool
+     * @return string $error
+     */
+
+    public function textValid($text, $title, $min = 3,  $max = 50, $empty = true)
+    {
+
+        $error = '';
+        if(!empty($text)) {
+            $strtext = strlen($text);
+            if($strtext > $max) {
+                $error = 'Votre ' . $title . ' est trop long.';
+            } elseif($strtext < $min) {
+                $error = 'Votre ' . $title . ' est trop court.';
+            }
+        } else {
+            if($empty) {
+                $error = 'Veuillez renseigner un ' . $title . '.';
+            }
+        }
+        return $error;
+
+    }
+
 
 }
