@@ -1,0 +1,22 @@
+@import "reset.css";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    background-color: #e39fe3;
+    padding-bottom: 40px;
+}
+
+.lienf {
+    float: left;
+    padding-left: 10%;
+    color: white;
+    text-decoration: none;
+}
+
+.navbarFooter {
+    margin-left: 20%;
+    padding-top: 30px;
+}
