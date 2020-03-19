@@ -4,10 +4,15 @@
 ////////HEADER///////
 //////////////////*/
 
+header {
+    background-color: #00a0d2;
+    padding-bottom: 130px;
+}
+
 .logo {
     float: left;
     width: 100px;
-    margin: 30px 2%;
+    margin: 15px 2%;
 
 }
 
