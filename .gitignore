@@ -204,3 +204,8 @@ node_modules/
 *.sqlite
 
 # End of https://www.gitignore.io/api/osx,linux,macos,windows,wordpress,phpstorm+all,visualstudiocode
+
+
+config/config.php
+/vendor
+.idea/
