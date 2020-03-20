@@ -12,7 +12,7 @@ class DefaultController extends Controller
 
     public function index()
     {
-        $message = 'Bienvenue sur le framework MVC';
+        $message = "Bienvenue dans l'espace parent de Childguard" ;
         $name = 'michel';
 
         $this->render('app.default.frontpage',array(
