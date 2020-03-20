@@ -1,7 +1,5 @@
 <?php
 namespace App\Weblitzer;
-
-use App;
 /**
  * SINGLETON permet de recupere une instance sur l'ensemble de l'application est une seule fois
  * m'envoie tjrs la meme instance
@@ -14,7 +12,7 @@ class Config
 
     public function __construct()
     {
-        $this->settings = require dirname(__DIR__) . '/../config/config.php';
+        $this->settings = require dirname(__DIR__) . '/../config/config-dist.php';
     }
 
     public static function getInstance()

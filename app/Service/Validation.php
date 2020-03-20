@@ -1,9 +1,5 @@
 <?php
 namespace App\Service;
-/**
- *  class Form
- *  Permet de generer un formulaire
- */
 
 class Validation
 {
