@@ -44,6 +44,14 @@ class DefaultController extends Controller
     /**
      *
      */
+    public function inscription()
+    {
+        $this->render('app.default.inscription');
+
+    }
+
+
+
     public function Page404()
     {
         $this->render('app.default.404');

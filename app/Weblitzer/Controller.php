@@ -75,7 +75,7 @@ class Controller
         return $post;
     }
 
-    protected function redirect($url)
+    public function redirect($url)
     {
         header('Location: '.$url);
         die();
