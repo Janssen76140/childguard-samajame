@@ -202,7 +202,4 @@ node_modules/
 *.log
 *.sql
 *.sqlite
-
-
-
 # End of https://www.gitignore.io/api/osx,linux,macos,windows,wordpress,phpstorm+all,visualstudiocode
