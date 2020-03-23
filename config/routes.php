@@ -6,7 +6,7 @@ $routes = array(
     array('single','default','single',array('id')),
     array('single2','default','single2',array('id','slug')),
     array('inscription','default','inscription'),
-
+    array('connexion','default','connexion'),
     // articles
     array('articles','article','index'),
 
