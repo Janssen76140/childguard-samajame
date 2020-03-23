@@ -40,7 +40,7 @@ class Validation
      * @return string $error
      */
 
-    public function textValid($text, $title, $min = 3,  $max = 50, $empty = true)
+    public function textValid($text, $title, $min = 1,  $max = 50, $empty = true)
     {
 
         $error = '';

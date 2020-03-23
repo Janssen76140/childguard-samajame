@@ -57,6 +57,7 @@ class DefaultController extends Controller
 
 
 
+
     public function Page404()
     {
         $this->render('app.default.404');
