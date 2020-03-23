@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <title>Title</title>
+    <title>Child Guard</title>
 
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
@@ -17,7 +17,7 @@
         <nav class="navbarHeader">
             <ul>
                 <li><a href="#" class="lien connexionHeader">Connexion</a></li>
-                <li><a href="#" class="lien inscriptionHeader">Inscription</a></li>
+                <li><a href="#" class="lien inscriptionHeader">S'inscrire</a></li>
             </ul>
         </nav>
     </div>
