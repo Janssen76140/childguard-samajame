@@ -49,6 +49,11 @@ class DefaultController extends Controller
         $this->render('app.default.inscription');
 
     }
+    public function connexion()
+    {
+        $this->render('app.default.connexion');
+
+    }
 
 
 
