@@ -18,6 +18,8 @@
               <li><a href="<?= $view->path('single2',array(12,'dedede')); ?>">Single2</a></li>
               <li><a href="<?= $view->path('articles'); ?>">Mes articles</a></li>
               <li><a href="<?= $view->path('inscription'); ?>">Inscription</a> </li>
+              <li><a href="<?= $view->path('connexion'); ?>">Connexion</a> </li>
+
           </ul>
       </nav>
     </header>
