@@ -1,0 +1,41 @@
+@import "reset.css";
+
+/*////////////////////
+////////HEADER///////
+//////////////////*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #00a0d2;
+    padding-bottom: 130px;
+}
+
+.logo {
+    float: left;
+    width: 100px;
+    margin: 15px 2%;
+
+}
+
+.lien {
+    float: left;
+    margin-top: 52px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.lien:hover {
+    color: red;
+}
+
+.connexionHeader {
+    margin-left: 65%;
+}
+
+.inscriptionHeader {
+    padding-left: 5%;
+}
