@@ -5,8 +5,8 @@ $routes = array(
     array('contact','default','contact'),
     array('single','default','single',array('id')),
     array('single2','default','single2',array('id','slug')),
-    array('inscription','default','inscription'),
-    array('connexion','default','connexion'),
+    array('inscription','user','inscription'),
+    array('connexion','user','connexion'),
     // articles
     array('articles','article','index'),
 

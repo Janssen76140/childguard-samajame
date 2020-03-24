@@ -16,13 +16,5 @@ class ModelUser extends Model
 
     }
 
-   /* public static function update($id,$post)
-    {
-        App::getDatabase()->prepareInsert(
-            "UPDATE ". self::getTable() . "
-            SET nom = ?,prenom = ?,email = ?,age = ?
-            WHERE id = ?",
-            array($post['nom'],$post['prenom'],$post['email'],$post['age'],$id)
-        );
-    } */
+
 }

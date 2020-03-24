@@ -15,7 +15,7 @@ class UserController extends Controller
 {
 
 
-    public function add()
+    public function inscription()
     {
         $errors = array();
         if(!empty($_POST['submitted'])) {
@@ -25,11 +25,11 @@ class UserController extends Controller
             $errors = $this->validationUser($validation,$errors,$post);
             if($validation->IsValid($errors)) {
                 ModelUser::insertUser($post);
-                $this->redirect('user');
+                $this->redirect('inscription');
             }
         }
         $form = new Form($errors);
-        $this->render('app.default.inscription',array(
+        $this->render('app.user.inscription',array(
             'form'  => $form
         ));
     }
@@ -41,7 +41,7 @@ class UserController extends Controller
         $errors['prenom'] = $validation->textValid($post['prenom'], 'prenom',1,  150);
         $errors['mdp'] = $validation->textValid($post['mdp'], 'mdp',5,  150);
         $errors['adresse'] = $validation->textValid($post['adresse'], 'adresse',5,  150);
-        $errors['ville'] = $validation->textValid($post['ville'], 'ville',5,  150);
+        $errors['ville'] = $validation->textValid($post['ville'], 'ville',2,  150);
         $errors['email']  = $validation->emailValid($post['email']);
         // validation age
 
