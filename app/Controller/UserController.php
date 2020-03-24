@@ -35,6 +35,53 @@ class UserController extends Controller
     }
 
 
+    public function connexion()
+    {
+
+        $errors = array();
+        $form = new Form($errors, 'post');
+        if (isset($_POST['submitted'])) {
+            $post = $this->cleanXss($_POST);
+            $validation = new Validation();
+            $errors['email'] = $validation->emailValid($post['email']);
+
+            if ($validation->IsValid($errors) == true) {
+                $user = Modeluser::userConnexion($post['email']);
+                if ($user->email === $post['email'] && password_verify($post['mdp'], $user->mdp)) {
+                    $_SESSION = array(
+                        'id'    => $user->id,
+                        'nom'   => $user->nom,
+                        'prenom'=> $user->prenom,
+                        'mail' => $user->mail,
+
+                    );
+                    $this->redirect('frontpage');
+                    unset($_POST);
+                } else {
+                    $errors['mdp'] = 'Mot de passe ou mail incorrect';
+                }
+            }
+        } else {
+            $errors['email'] = 'Error ';
+        }
+
+        $this->render('app.user.connexion', array(
+            'form'  => $form,
+        ));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     private function validationUser($validation,$errors,$post)
     {
         $errors['nom']    = $validation->textValid($post['nom'], 'nom',1,150);
