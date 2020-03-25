@@ -7,7 +7,7 @@ use App\App;
  */
 class ModelUser extends Model
 {
-    protected static $table = 'user';
+    protected static $table = 'chi_user';
 
 
     public static function insertUser($post)
