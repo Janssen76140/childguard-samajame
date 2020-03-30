@@ -5,18 +5,42 @@ body {
 }
 
 footer {
-    background-color: #e39fe3;
     padding-bottom: 40px;
+    margin-top: 40px;
 }
 
 .lienf {
     float: left;
-    padding-left: 10%;
+    font-family: "Bellota Text";
     color: white;
     text-decoration: none;
+    border: 1px solid transparent;
+    padding: 8px 25px;
+    border-radius: 20px;
 }
 
 .navbarFooter {
     margin-left: 20%;
     padding-top: 30px;
+}
+
+.contact, .conditions, .mentions {
+    margin-left: 10%;
+}
+
+.home {
+    margin-left: 3%;
+    background-color: #78A0FF;
+}
+
+.contact {
+    background-color: #8BAE00;
+}
+
+.conditions {
+    background-color: #FFA93C;
+}
+
+.mentions {
+    background-color:  #de91e4  ;
 }
