@@ -7,7 +7,7 @@
         top: 300px;
         left: 10%;
         width: 150px;
-        padding: 0 10px;
+        padding: 0 20px;
         border: 1px solid #ccc;
         background: #eee;
     }
@@ -35,7 +35,7 @@
 
         var containerEl = document.getElementById('external-events');
         var calendarEl = document.getElementById('calendar');
-        var checkbox = document.getElementById('drop-remove');
+
 
 // initialize the external events
 // -----------------------------------------------------------------
@@ -54,20 +54,16 @@
 
         var calendar = new Calendar(calendarEl, {
             plugins: ['interaction', 'dayGrid', 'timeGrid'],
+            timeZone: 'UTC+1',
             header: {
                 left: 'prev,next today',
-                center: 'title',
+                center: 'title', //+nom pro
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
             editable: true,
+            eventLimit: true ,
             droppable: true, // this allows things to be dropped onto the calendar
-            drop: function (info) {
-// is the "remove after drop" checkbox checked?
-                if (checkbox.checked) {
-// if so, remove the element from the "Draggable Events" list
-                    info.draggedEl.parentNode.removeChild(info.draggedEl);
-                }
-            }
+
         });
 
         calendar.render();
@@ -75,17 +71,14 @@
 </script>
 <div id='external-events'>
     <p>
-        <strong>Draggable Events</strong>
+        <strong>Glissez vos réservations </strong>
     </p>
     <div class='fc-event'>My Event 1</div>
     <div class='fc-event'>My Event 2</div>
     <div class='fc-event'>My Event 3</div>
     <div class='fc-event'>My Event 4</div>
     <div class='fc-event'>My Event 5</div>
-    <p>
-        <input type='checkbox' id='drop-remove'/>
-        <label for='drop-remove'>remove after drop</label>
-    </p>
+
 </div>
 
 <div id='calendar-container'>
