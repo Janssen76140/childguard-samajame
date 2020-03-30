@@ -6,7 +6,7 @@ body {
 
 footer {
     padding-bottom: 40px;
-    margin-top: 40px;
+    box-shadow: 0 -4px 3px lightgrey;
 }
 
 .lienf {
