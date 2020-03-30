@@ -1,6 +1,11 @@
 <?php
 ?>
-
+<style>
+    #calendar {
+        max-width: 900px;
+        margin: 40px auto;
+    }
+</style>
 <script>
 
 
@@ -12,7 +17,7 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
             plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
             defaultView: 'dayGridMonth',
-            defaultDate: '2020-02-07',
+            defaultDate: '2020-04-10',
             header: {
                 left: 'prev,next today',
                 center: 'title',
