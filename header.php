@@ -13,7 +13,7 @@
 <header>
 
     <div>
-        <a href="#"><img class="logo" src="asset/img/logosamajame_rd_contour.svg" alt="Logo ChildGuard"/></a>
+        <a href="#"><img class="logo" src="public/asset/img/logosamajame_rd_contour.svg" alt="Logo ChildGuard"/></a>
         <nav class="navbarHeader">
             <ul>
                 <li><a href="#" class="lien connexionHeader">Connexion</a></li>

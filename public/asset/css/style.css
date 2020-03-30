@@ -1,65 +1,90 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import 'reset.css';
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-*,
-*:after,
-*:before {
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    -webkit-font-smoothing:antialiased;
-    font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+/*HEADER*/
+
+header {
+    background-color: white;
+    padding-bottom: 110px;
+    box-shadow: 0 3px 3px lightgrey;
 }
 
-html { font-size:100%;}
-body { font:400 16px/1.3 Verdana, sans-serif;color:#464646; background-color: #fff;}
-/* clear */
+.logo {
+    float: left;
+    width: 80px;
+    margin: 15px 5%;
 
-.clear:before,.clear:after { content:' '; display:table; }
-.clear:after { clear:both; }
-.clear { *zoom:1;}
+}
+
+.lien {
+    float: left;
+    text-decoration: none;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.connexionHeader:hover {
+}
+
+.inscriptionHeader:hover {
+}
+
+.connexionHeader {
+    margin-left: 60%;
+    margin-top: 40px;
+    color: #30628f;
+}
+
+.inscriptionHeader {
+    margin-left: 3%;
+    margin-top: 30px;
+    border: 2px solid #30628f;
+    padding: 10px 15px;
+    border-radius: 2px;
+    color: #30628f;
+}
+
+
+/*FOOTER*/
+
+footer {
+    padding-bottom: 40px;
+    box-shadow: 0 -4px 3px lightgrey;
+}
+
+.lienf {
+    float: left;
+    font-family: "Bellota Text";
+    color: white;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 8px 25px;
+    border-radius: 20px;
+}
+
+.navbarFooter {
+    margin-left: 20%;
+    padding-top: 30px;
+}
+
+.contact, .conditions, .mentions {
+    margin-left: 10%;
+}
+
+.home {
+    margin-left: 3%;
+    background-color: #78A0FF;
+}
+
+.contact {
+    background-color: #8BAE00;
+}
+
+.conditions {
+    background-color: #FFA93C;
+}
+
+.mentions {
+    background-color:  #de91e4  ;
+}
+
+

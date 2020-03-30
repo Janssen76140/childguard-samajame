@@ -18,6 +18,15 @@
 
 
     <header>
+
+            <a href="#"><img class="logo" src="asset/img/logosamajame_rd_contour.svg" alt="Logo ChildGuard"/></a>
+            <nav class="navbarHeader">
+                <ul>
+                    <li><a href="<?= $view->path('connexion'); ?>" class="lien connexionHeader">Connexion</a></li>
+                    <li><a href="<?= $view->path('inscription'); ?>" class="lien inscriptionHeader">S'inscrire</a></li>
+                </ul>
+            </nav>
+
       <nav>
           <ul>
               <li><a href="<?= $view->path('home'); ?>">Home</a></li>
@@ -38,7 +47,23 @@
     </div>
 
     <footer>
+        <link href="https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="asset/css/style1.css">
 
+        <footer>
+            <nav class="navbarFooter">
+                <ul>
+                    <li><a href="#" class="lienf home">Accueil</a></li>
+                    <li><a href="#" class="lienf contact">Contact</a></li>
+                    <li><a href="#" class="lienf conditions">CGU</a></li>
+                    <li><a href="#" class="lienf mentions">Mentions Légales</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+  </body>
+
+</html>
     </footer>
 
     <script src="<?= $view->asset('js/main.js'); ?>"></script>
