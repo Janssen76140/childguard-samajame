@@ -8,6 +8,8 @@ $routes = array(
     array('inscription','user','inscription'),
     array('connexion','user','connexion'),
     array('calendrier','calendrier','calendrier'),
+    array('addEnfant','user','addEnfant'),
+
     // articles
     array('articles','article','index'),
 

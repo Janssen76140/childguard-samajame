@@ -3,10 +3,11 @@
 namespace App\Controller;
 
 
+use App\Model\ModelUser;
 use App\Service\Form;
 use App\Service\Validation;
 use App\Weblitzer\Controller;
-use App\Weblitzer\ModelUser;
+
 
 /**
  *
@@ -25,7 +26,7 @@ class UserController extends Controller
             $errors = $this->validationUser($validation,$errors,$post);
             if($validation->IsValid($errors)) {
                 ModelUser::insertUser($post);
-                $this->redirect('inscription');
+                $this->redirect('connexion');
             }
         }
         $form = new Form($errors);
@@ -46,7 +47,7 @@ class UserController extends Controller
             $errors['email'] = $validation->emailValid($post['email']);
 
             if ($validation->IsValid($errors) == true) {
-                $user = Modeluser::userConnexion($post['email']);
+                $user = ModelUser::userConnexion($post['email']);
                 if ($user->email === $post['email'] && password_verify($post['mdp'], $user->mdp)) {
                     $_SESSION = array(
                         'id'    => $user->id,
@@ -55,7 +56,7 @@ class UserController extends Controller
                         'mail' => $user->mail,
 
                     );
-                    $this->redirect('frontpage');
+                    $this->redirect('mesEnfants.php');
                     unset($_POST);
                 } else {
                     $errors['mdp'] = 'Mot de passe ou mail incorrect';
@@ -71,17 +72,6 @@ class UserController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     private function validationUser($validation,$errors,$post)
     {
         $errors['nom']    = $validation->textValid($post['nom'], 'nom',1,150);
@@ -93,6 +83,42 @@ class UserController extends Controller
         // validation age
 
         return $errors;
+    }
+
+    private function validationEnfant($validation,$errors,$post)
+    {
+        $errors['nom']    = $validation->textValid($post['nom'], 'nom',1,150);
+        $errors['prenom'] = $validation->textValid($post['prenom'], 'prenom',1,  150);
+        $errors['responsableLegal'] = $validation->textValid($post['responsableLegal'], 'responsableLegal',5,  150);
+        $errors['age'] = $validation->textValid($post['dateNaissance'], 'dateNaissance',1,  50);
+        $errors['allergie'] = $validation->textValid($post['allergie'], 'allergie',1,250);
+        $errors['vaccins']  = $validation->textValid($post['vaccins'], 'vaccins',1,250);
+        $errors['maladie']  = $validation->textValid($post['maladie'], 'maladie',1,250);
+        $errors['regimeAlimentaire']  = $validation->textValid($post['regimeAlimentaire'], 'regimeAlimentaire',5,  150);
+        // validation age
+
+        return $errors;
+    }
+
+    public function addEnfant()
+    {
+        $errors = array();
+        if(!empty($_POST['submitted'])) {
+            $post = $this->cleanXss($_POST);
+            // validation
+            $validation = new Validation();
+            $errors = $this->validationEnfant($validation,$errors,$post);
+            if($validation->IsValid($errors)) {
+                ModelUser::insertEnfant($post);
+                $this->redirect('addEnfant');
+            }
+        }
+
+
+        $form = new Form($errors);
+        $this->render('app.user.mesEnfants',array(
+            'form'  => $form
+        ));
     }
 
 
