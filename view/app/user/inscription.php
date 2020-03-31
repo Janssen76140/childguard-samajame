@@ -5,8 +5,6 @@ use App\Service\Form;
 
 
 ?>
-<link href="https://fonts.googleapis.com/css?family=Bellota:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
 
 <h1 class="inscriptionTitre"> Inscription </h1>
 
