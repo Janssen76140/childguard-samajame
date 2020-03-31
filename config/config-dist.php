@@ -3,9 +3,9 @@
 /* config/config.php */
 
 return array(
-    'db_name'   => 'childguard_samajame',
+    'db_name'   => 'childguard',
     'db_user'   => 'root',
-    'db_pass'   => 'root',
+    'db_pass'   => '',
     'db_host'   => 'localhost',
 
     'directory' => '/childguard/'

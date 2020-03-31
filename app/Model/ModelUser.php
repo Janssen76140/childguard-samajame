@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Weblitzer;
+namespace App\Model;
 use App\App;
+use App\Weblitzer\Model;
+
 /**
  *
  */

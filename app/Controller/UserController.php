@@ -3,10 +3,11 @@
 namespace App\Controller;
 
 
+use App\Model\ModelUser;
 use App\Service\Form;
 use App\Service\Validation;
 use App\Weblitzer\Controller;
-use App\Weblitzer\ModelUser;
+
 
 /**
  *
@@ -25,7 +26,7 @@ class UserController extends Controller
             $errors = $this->validationUser($validation,$errors,$post);
             if($validation->IsValid($errors)) {
                 ModelUser::insertUser($post);
-                $this->redirect('inscription');
+                $this->redirect('connexion');
             }
         }
         $form = new Form($errors);
@@ -46,7 +47,7 @@ class UserController extends Controller
             $errors['email'] = $validation->emailValid($post['email']);
 
             if ($validation->IsValid($errors) == true) {
-                $user = Modeluser::userConnexion($post['email']);
+                $user = ModelUser::userConnexion($post['email']);
                 if ($user->email === $post['email'] && password_verify($post['mdp'], $user->mdp)) {
                     $_SESSION = array(
                         'id'    => $user->id,
@@ -55,7 +56,7 @@ class UserController extends Controller
                         'mail' => $user->mail,
 
                     );
-                    $this->redirect('frontpage');
+                    $this->redirect('mesEnfants');
                     unset($_POST);
                 } else {
                     $errors['mdp'] = 'Mot de passe ou mail incorrect';
@@ -71,17 +72,6 @@ class UserController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     private function validationUser($validation,$errors,$post)
     {
         $errors['nom']    = $validation->textValid($post['nom'], 'nom',1,150);
@@ -93,6 +83,13 @@ class UserController extends Controller
         // validation age
 
         return $errors;
+    }
+
+
+
+    public function addEnfant()
+    {
+
     }
 
 
