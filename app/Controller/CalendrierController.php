@@ -16,4 +16,10 @@ class CalendrierController extends Controller
         );
     }
 
+
+    public function reserver()
+    {
+
+    }
+
 }
