@@ -8,7 +8,8 @@
             <p class="pres1">Trouver une place ?<br>Un jeu d'enfant !</p>
             <form action="" method="get">
                 <div>
-                    <input id="adresse" name="distance" value="" placeholder="Indiquez votre adresse" type="text">
+                    <input id="adresse_search" name="distance" value="" placeholder="Indiquez votre adresse"
+                           type="text">
                 </div>
                 <div>
                     <select name="distance" id="distance"></select>
