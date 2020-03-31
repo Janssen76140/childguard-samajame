@@ -5,12 +5,14 @@ use App\Service\Form;
 
 
 ?>
+<link href="https://fonts.googleapis.com/css?family=Bellota:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
 
-<h1> Inscription </h1>
+<h1 class="inscriptionTitre"> Inscription </h1>
 
+<div class="barre"></div>
 
-
-<form action="" method="post">
+<form class="formInscr" action="" method="post">
     <?php
     echo $form->label('nom', 'Nom');
     echo $form->input('nom', 'text');
