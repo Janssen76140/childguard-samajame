@@ -14,7 +14,8 @@ class ModelUser extends Model
 
     public static function insertUser($post)
     {
-        App::getDatabase()->prepareInsert("INSERT INTO " . self::getTable() . " (nom,prenom,email,mdp,adresse,ville,téléphone,created_at,modified_at) VALUES (?,?,?,?,?,?,?,NOW(),NOW()) ",[$post['nom'],$post['prenom'],$post['email'],$post['mdp'],$post['adresse'],$post['ville'],$post['téléphone']]);
+        $hash = password_hash($post['mdp'], PASSWORD_DEFAULT);
+        App::getDatabase()->prepareInsert("INSERT INTO " . self::getTable() . " (nom,prenom,email,mdp,adresse,ville,téléphone,created_at,modified_at) VALUES (NULL,?,?,?,?,?,?,?,NOW(),NOW()) ",[$post['nom'],$post['prenom'],$post['email'],$hash,$post['adresse'],$post['ville'],$post['téléphone']]);
 
     }
 
