@@ -23,9 +23,9 @@ use App\Service\Form;
     echo $form->input('responsableLegal', 'text');
     echo $form->error('responsableLegal');
 
-    echo $form->label('Âge :', 'age');
-    echo $form->input('age', 'text');
-    echo $form->error('age');
+    echo $form->label('Date de naissance :', 'dateNaissance');
+    echo $form->input('dateNaissance', 'text');
+    echo $form->error('dateNaissance');
 
 
     echo $form->label('Allergies :', 'allergie');

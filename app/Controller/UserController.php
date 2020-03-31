@@ -56,7 +56,7 @@ class UserController extends Controller
                         'mail' => $user->mail,
 
                     );
-                    $this->redirect('mesEnfants');
+                    $this->redirect('mesEnfants.php');
                     unset($_POST);
                 } else {
                     $errors['mdp'] = 'Mot de passe ou mail incorrect';
@@ -90,7 +90,7 @@ class UserController extends Controller
         $errors['nom']    = $validation->textValid($post['nom'], 'nom',1,150);
         $errors['prenom'] = $validation->textValid($post['prenom'], 'prenom',1,  150);
         $errors['responsableLegal'] = $validation->textValid($post['responsableLegal'], 'responsableLegal',5,  150);
-        $errors['age'] = $validation->textValid($post['age'], 'age',1,  50);
+        $errors['age'] = $validation->textValid($post['dateNaissance'], 'dateNaissance',1,  50);
         $errors['allergie'] = $validation->textValid($post['allergie'], 'allergie',1,250);
         $errors['vaccins']  = $validation->textValid($post['vaccins'], 'vaccins',1,250);
         $errors['maladie']  = $validation->textValid($post['maladie'], 'maladie',1,250);

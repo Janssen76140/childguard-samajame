@@ -21,7 +21,7 @@ class ModelUser extends Model
 
     public static function insertEnfant($post)
     {
-        App::getDatabase()->prepareInsert("INSERT INTO chi_enfant (nom,prenom,responsableLegal,age,allergie,vaccins,maladie,regimeAlimentaire,id_parent,created_at,modified_at) VALUES (?,?,?,?,?,?,?,?,?,NOW(),NOW()) ",[$post['nom'],$post['prenom'],$post['responsableLegal'],$post['age'],$post['allergie'],$post['vaccins'],$post['maladie'],$post['regimeAlimentaire'],$post['id_parent']]);
+        App::getDatabase()->prepareInsert("INSERT INTO chi_enfant (nom,prenom,responsableLegal,dateNaissance,allergie,vaccins,maladie,regimeAlimentaire,id_parent,created_at,modified_at) VALUES (?,?,?,?,?,?,?,?,?,NOW(),NOW()) ",[$post['nom'],$post['prenom'],$post['responsableLegal'],$post['dateNaissance'],$post['allergie'],$post['vaccins'],$post['maladie'],$post['regimeAlimentaire'],$post['id_parent']]);
 
     }
 
