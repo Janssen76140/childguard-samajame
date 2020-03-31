@@ -85,11 +85,40 @@ class UserController extends Controller
         return $errors;
     }
 
+    private function validationEnfant($validation,$errors,$post)
+    {
+        $errors['nom']    = $validation->textValid($post['nom'], 'nom',1,150);
+        $errors['prenom'] = $validation->textValid($post['prenom'], 'prenom',1,  150);
+        $errors['responsableLegal'] = $validation->textValid($post['responsableLegal'], 'responsableLegal',5,  150);
+        $errors['age'] = $validation->textValid($post['age'], 'age',1,  50);
+        $errors['allergie'] = $validation->textValid($post['allergie'], 'allergie',1,250);
+        $errors['vaccins']  = $validation->textValid($post['vaccins'], 'vaccins',1,250);
+        $errors['maladie']  = $validation->textValid($post['maladie'], 'maladie',1,250);
+        $errors['regimeAlimentaire']  = $validation->textValid($post['regimeAlimentaire'], 'regimeAlimentaire',5,  150);
+        // validation age
 
+        return $errors;
+    }
 
     public function addEnfant()
     {
+        $errors = array();
+        if(!empty($_POST['submitted'])) {
+            $post = $this->cleanXss($_POST);
+            // validation
+            $validation = new Validation();
+            $errors = $this->validationEnfant($validation,$errors,$post);
+            if($validation->IsValid($errors)) {
+                ModelUser::insertEnfant($post);
+                $this->redirect('calendrier');
+            }
+        }
 
+
+        $form = new Form($errors);
+        $this->render('app.user.mesEnfants',array(
+            'form'  => $form
+        ));
     }
 
 
