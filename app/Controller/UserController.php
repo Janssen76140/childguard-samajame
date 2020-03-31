@@ -110,7 +110,7 @@ class UserController extends Controller
             $errors = $this->validationEnfant($validation,$errors,$post);
             if($validation->IsValid($errors)) {
                 ModelUser::insertEnfant($post);
-                $this->redirect('calendrier');
+                $this->redirect('addEnfant');
             }
         }
 
