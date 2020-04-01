@@ -54,4 +54,13 @@ class DefaultController extends Controller
         $this->render('app.default.404');
     }
 
+    public function  cgu()
+    {
+        $this->render('app.default.cgu');
+    }
+
+    public function ml()
+    {
+        $this->render('app.default.mentions_legales');
+    }
 }

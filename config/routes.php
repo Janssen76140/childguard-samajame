@@ -9,6 +9,8 @@ $routes = array(
     array('connexion','user','connexion'),
     array('calendrier','calendrier','calendrier'),
     array('addEnfant','user','addEnfant'),
+    array('cgu', 'default', 'cgu'),
+    array('mentions_legales', 'default','ml'),
 
     // articles
     array('articles','article','index'),

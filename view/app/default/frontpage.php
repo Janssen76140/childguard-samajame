@@ -12,7 +12,14 @@
                            type="text">
                 </div>
                 <div>
-                    <select name="distance" id="distance"></select>
+                    <select name="distance" id="distance">
+                        <option value="">1Km</option>
+                        <option value="">5Km</option>
+                        <option value="">10Km</option>
+                        <option value="">30Km</option>
+                        <option value="">50Km</option>
+
+                    </select>
                 </div>
                 <div>
                     <input id="go" type="submit" name="submitted" value="GO !">
