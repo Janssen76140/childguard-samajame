@@ -35,6 +35,8 @@
               <li><a href="<?= $view->path('connexion'); ?>">Connexion</a> </li>
               <li><a href="<?= $view->path('calendrier'); ?>"> Reserver</a> </li>
 
+              <li><a href="<?= $view->path('listingPro'); ?>">Liste des professionnels</a> </li>
+
           </ul>
       </nav>
     </header>
