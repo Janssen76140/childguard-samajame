@@ -26,7 +26,6 @@ class UserController extends Controller
             $errors = $this->validationUser($validation,$errors,$post);
             if($validation->IsValid($errors)) {
                 ModelUser::insertUser($post);
-                $this->redirect('connexion');
             }
         }
         $form = new Form($errors);
@@ -47,23 +46,21 @@ class UserController extends Controller
             $errors['email'] = $validation->emailValid($post['email']);
 
             if ($validation->IsValid($errors) == true) {
+
                 $user = ModelUser::userConnexion($post['email']);
                 if ($user->email === $post['email'] && password_verify($post['mdp'], $user->mdp)) {
                     $_SESSION = array(
-                        'id'    => $user->id,
+                        'id'    => $user->id_user,
                         'nom'   => $user->nom,
                         'prenom'=> $user->prenom,
-                        'mail' => $user->mail,
-
+                        'email' => $user->email,
                     );
-                    $this->redirect('mesEnfants.php');
-                    unset($_POST);
                 } else {
                     $errors['mdp'] = 'Mot de passe ou mail incorrect';
                 }
             }
-        } else {
-            $errors['email'] = 'Error ';
+        }else {
+            $errors['email'] = 'Error';
         }
 
         $this->render('app.user.connexion', array(
@@ -110,7 +107,6 @@ class UserController extends Controller
             $errors = $this->validationEnfant($validation,$errors,$post);
             if($validation->IsValid($errors)) {
                 ModelUser::insertEnfant($post);
-                $this->redirect('addEnfant');
             }
         }
 
