@@ -42,11 +42,10 @@
         <ul>
             <li><a href="<?= $view->path('connexion'); ?>" class="lien connexionHeader">Connexion</a></li>
             <li><a href="<?= $view->path('inscription'); ?>" class="lien inscriptionHeader">S'inscrire</a></li>
-
-        </ul>
-    </nav>
-    <?php }  ?>
-</header>
+            <li><a href="<?= $view->path('listingPro'); ?>">Liste des professionnels</a> </li>
+          </ul>
+      </nav>
+    </header>
 
 <div class="container">
     <?= $content; ?>
