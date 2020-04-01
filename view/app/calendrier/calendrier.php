@@ -26,6 +26,7 @@
     #calendar {
         max-width: 900px;
         margin: 20px auto;
+
     }
 </style>
 <script>
@@ -71,7 +72,7 @@
 </script>
 <div id='external-events'>
     <p>
-        <strong>Glissez vos réservations </strong>
+        <strong>Glissez vos réservations  <?= $prenom ?></strong>
     </p>
     <div class='fc-event'>My Event 1</div>
     <div class='fc-event'>My Event 2</div>

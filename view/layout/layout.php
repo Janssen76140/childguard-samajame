@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Childgard</title>
-      <link href='../fullcalendar/packages/core/main.css' rel='stylesheet' type="text/css" />
-      <link href='../fullcalendar/packages/daygrid/main.css' rel='stylesheet' type="text/css" />
-      <link href='../fullcalendar/packages/timegrid/main.css' rel='stylesheet' type="text/css" />
-      <script type="module" src="../fullcalendar/packages/core/main.js"></script>
-      <script type="module" src="../fullcalendar/packages/daygrid/main.js"></script>
-      <script type="module" src="../fullcalendar/packages/interaction/main.js"></script>
-      <script type="module" src="../fullcalendar/packages/timegrid/main.js"></script>
+      <link href='../../../../fullcalendar/packages/core/main.css' rel='stylesheet' type="text/css" />
+      <link href='../../../../fullcalendar/packages/daygrid/main.css' rel='stylesheet' type="text/css" />
+      <link href='../../../../fullcalendar/packages/timegrid/main.css' rel='stylesheet' type="text/css" />
+      <script type="module" src="../../../../fullcalendar/packages/core/main.js"></script>
+      <script type="module" src="../../../../fullcalendar/packages/daygrid/main.js"></script>
+      <script type="module" src="../../../../fullcalendar/packages/interaction/main.js"></script>
+      <script type="module" src="../../../../fullcalendar/packages/timegrid/main.js"></script>
 
     <link rel="stylesheet" type="text/css" href="<?= $view->asset('css/style.css'); ?>">
   </head>
