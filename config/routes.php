@@ -12,6 +12,8 @@ $routes = array(
     array('cgu', 'default', 'cgu'),
     array('mentions_legales', 'default','ml'),
 
+    array('listingPro','pro','listingPro'),
+
     // articles
     array('articles','article','index'),
 
