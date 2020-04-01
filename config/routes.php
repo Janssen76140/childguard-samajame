@@ -10,6 +10,8 @@ $routes = array(
     array('calendrier','calendrier','calendrier'),
     array('addEnfant','user','addEnfant'),
 
+    array('listingPro','pro','listingPro'),
+
     // articles
     array('articles','article','index'),
 
