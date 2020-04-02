@@ -61,7 +61,8 @@ class UserController extends Controller
                 } else {
                     $errors['mdp'] = 'Mot de passe ou mail incorrect';
                 }
-            }$this->redirect('addEnfant/'.$_SESSION['prenom'].'');
+
+            }$this->redirect('addEnfant/'.$chi_user -> prenom);
         }
         else {
             $errors['email'] = 'Error ';
