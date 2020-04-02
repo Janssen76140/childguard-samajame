@@ -1,16 +1,16 @@
 <?php
-
 use App\Service\Form;
 
 
 ?>
 
-<h1> Inscription </h1>
+<h1> Bonjour <?php echo $prenom ?>, Inscription de votre enfant</h1>
 
 
 
 <form action="" method="post">
     <?php
+
     echo $form->label('Nom :', 'nom');
     echo $form->input('nom', 'text');
     echo $form->error('nom');

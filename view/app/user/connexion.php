@@ -15,7 +15,7 @@ use App\Service\Form;
     <?php
 
 
-    echo $form->label('email', 'Email');
+    echo $form->label('email', 'email');
     echo $form->input('email', 'email');
     echo $form->error('email');
 

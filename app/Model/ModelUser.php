@@ -27,7 +27,7 @@ class ModelUser extends Model
     }
 
 
-    public static function userConnexion(string $email)
+    public static function userConnexion($email)
     {
         $sql = "SELECT * FROM " . self::getTable() . " WHERE email= ?";
         return App::getDatabase()->prepare($sql, [$email], get_called_class(),true);

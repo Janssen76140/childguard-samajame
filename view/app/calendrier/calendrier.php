@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 ?>
 <style>
     #external-events {
@@ -74,11 +78,11 @@
     <p>
         <strong>Glissez vos réservations  <?= $prenom ?></strong>
     </p>
-    <div class='fc-event'>My Event 1</div>
-    <div class='fc-event'>My Event 2</div>
-    <div class='fc-event'>My Event 3</div>
-    <div class='fc-event'>My Event 4</div>
-    <div class='fc-event'>My Event 5</div>
+    <?php foreach ($prenomEnfants as $prenomEnfant){ ?>
+
+    <div class='fc-event'><?= $prenomEnfant ?>></div>
+
+    <?php } ?>
 
 </div>
 
