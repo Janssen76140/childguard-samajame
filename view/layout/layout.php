@@ -41,6 +41,7 @@
           </ul>
       </nav>
     </header>
+<?php } ?>
 
 <div class="container">
     <?= $content; ?>
