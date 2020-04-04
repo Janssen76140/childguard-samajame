@@ -74,6 +74,20 @@ class UserController extends Controller
         ));
     }
 
+    public function deconnexion()
+    {
+        $_SESSION = array();
+
+        session_destroy();
+
+
+        $this->redirect('home');
+
+
+    }
+
+
+
 
     private function validationUser($validation,$errors,$post)
     {
@@ -124,6 +138,11 @@ class UserController extends Controller
             'prenom' => $prenom,
     ));
     }
+
+
+
+
+
 
 
 
