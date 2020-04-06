@@ -8,7 +8,7 @@ $routes = array(
     array('inscription','user','inscription'),
     array('connexion','user','connexion'),
     array('deconnexion','user','deconnexion'),
-    array('calendrier','calendrier','calendrier',array('prenom','id_user','id')),
+    array('calendrier','calendrier','calendrier',array('prenom','id')),
     array('addEnfant','user','addEnfant',array('prenom')),
 
     array('listingPro','pro','listingPro',array('prenom')),
