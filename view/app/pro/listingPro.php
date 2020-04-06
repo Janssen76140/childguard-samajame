@@ -24,7 +24,7 @@
             <td><?= $pro->heureFin; ?></td>
             <td><?= $pro->adresse; ?></td>
             <td>
-                <a href="<?= $view->path('calendrier',array($pro->id,$user->id_user)); ?>">Voir</a>
+                <a href="<?= $view->path('calendrier',array($prenom ,$pro->id)); ?>">Voir</a>
             </td>
         </tr>
     <?php } ?>
