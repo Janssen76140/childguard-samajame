@@ -60,5 +60,20 @@ class Validation
 
     }
 
+    public function is_logged()
+    {
+        if (!empty($_SESSION)) {
+            if (!empty($_SESSION['id']) && is_numeric($_SESSION['id'])) {
+                if (!empty($_SESSION['nom'])) {
+                    if (!empty($_SESSION['prenom'])) {
+                        if (!empty($_SESSION['email'])) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
 }

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Childgard</title>
+
     <link href='../../../../fullcalendar/packages/core/main.css' rel='stylesheet' type="text/css"/>
     <link href='../../../../fullcalendar/packages/daygrid/main.css' rel='stylesheet' type="text/css"/>
     <link href='../../../../fullcalendar/packages/timegrid/main.css' rel='stylesheet' type="text/css"/>
@@ -11,6 +12,8 @@
     <script type="module" src="../../../../fullcalendar/packages/daygrid/main.js"></script>
     <script type="module" src="../../../../fullcalendar/packages/interaction/main.js"></script>
     <script type="module" src="../../../../fullcalendar/packages/timegrid/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellota:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="<?= $view->asset('css/style.css'); ?>">
 </head>
@@ -56,6 +59,7 @@
 </div>
 
 <footer>
+  
     <link href="https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="asset/css/style1.css">
@@ -63,10 +67,10 @@
     <footer>
         <nav class="navbarFooter">
             <ul>
-                <li><a href="#" class="lienf home">Accueil</a></li>
-                <li><a href="#" class="lienf contact">Contact</a></li>
-                <li><a href="#" class="lienf conditions">CGU</a></li>
-                <li><a href="#" class="lienf mentions">Mentions Légales</a></li>
+                <li><a href="<?= $view->path('home'); ?>" class="lienf home">Accueil</a></li>
+                <li><a href="<?= $view->path('contact'); ?>" class="lienf contact">Contact</a></li>
+                <li><a href="<?= $view->path('cgu'); ?>" class="lienf conditions">CGU</a></li>
+                <li><a href="<?= $view->path('mentions_legales'); ?>" class="lienf mentions">Mentions Légales</a></li>
             </ul>
         </nav>
     </footer>
