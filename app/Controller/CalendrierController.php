@@ -9,13 +9,26 @@ use App\Weblitzer\Controller;
  */
 class CalendrierController extends Controller
 {
-    public function calendrier()
-    {
+    public function calendrier($id, $id_user, $prenom)
 
-        $this->render('app.calendrier.calendrier'
-        );
+    {
+       // $this->afficherprenomEnfants($prenomEnfants);
+        $this->render('app.calendrier.calendrier',array(
+            'id'=>$id,
+            'id_user' =>$id_user,
+            'prenom' => $prenom,
+            //'prenomEnfants' => $prenomEnfants,
+        ));
     }
 
+
+   /* public function afficherprenomEnfants($prenomEnfants)
+        {
+            foreach ($prenomEnfants as $prenomEnfant){
+               echo '<div class="fc-event">' .$prenomEnfant->prenom. '</div>';
+           }
+        }
+   */
 
     public function reserver()
     {

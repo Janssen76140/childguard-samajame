@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 
@@ -41,35 +40,53 @@ class UserController extends Controller
 
         $errors = array();
         $form = new Form($errors, 'post');
-        if (isset($_POST['submitted'])) {
+        if (!empty($_POST['submitted'])) {
             $post = $this->cleanXss($_POST);
             $validation = new Validation();
             $errors['email'] = $validation->emailValid($post['email']);
 
             if ($validation->IsValid($errors) == true) {
-                $user = ModelUser::userConnexion($post['email']);
-                if ($user->email === $post['email'] && password_verify($post['mdp'], $user->mdp)) {
-                    $_SESSION = array(
-                        'id'    => $user->id,
-                        'nom'   => $user->nom,
-                        'prenom'=> $user->prenom,
-                        'mail' => $user->mail,
+                $chi_user = ModelUser::userConnexion($post['email']);
+                if($chi_user->email === $post['email'] && password_verify($post['mdp'], $chi_user->mdp)) {
+                    $_SESSION['email'] = array(
+                        'id_user'    => $chi_user['id_user'],
+                        'nom'   => $chi_user['nom'],
+                        'prenom'=> $chi_user['prenom'],
+                        'email' => $chi_user['email'],
 
                     );
-                    $this->redirect('mesEnfants.php');
-                    unset($_POST);
+
+                   // unset($_POST);
+
                 } else {
                     $errors['mdp'] = 'Mot de passe ou mail incorrect';
                 }
-            }
-        } else {
+
+            }$this->redirect('addEnfant/'.$chi_user -> prenom);
+        }
+        else {
             $errors['email'] = 'Error ';
         }
 
         $this->render('app.user.connexion', array(
             'form'  => $form,
+            'errors' => $errors,
         ));
     }
+
+    public function deconnexion()
+    {
+        $_SESSION = array();
+
+        session_destroy();
+
+
+        $this->redirect('home');
+
+
+    }
+
+
 
 
     private function validationUser($validation,$errors,$post)
@@ -90,7 +107,7 @@ class UserController extends Controller
         $errors['nom']    = $validation->textValid($post['nom'], 'nom',1,150);
         $errors['prenom'] = $validation->textValid($post['prenom'], 'prenom',1,  150);
         $errors['responsableLegal'] = $validation->textValid($post['responsableLegal'], 'responsableLegal',5,  150);
-        $errors['age'] = $validation->textValid($post['dateNaissance'], 'dateNaissance',1,  50);
+        //$errors['age'] = $validation->textValid($post['dateNaissance'], 'dateNaissance',1,  50);
         $errors['allergie'] = $validation->textValid($post['allergie'], 'allergie',1,250);
         $errors['vaccins']  = $validation->textValid($post['vaccins'], 'vaccins',1,250);
         $errors['maladie']  = $validation->textValid($post['maladie'], 'maladie',1,250);
@@ -100,7 +117,7 @@ class UserController extends Controller
         return $errors;
     }
 
-    public function addEnfant()
+    public function addEnfant($prenom)
     {
         $errors = array();
         if(!empty($_POST['submitted'])) {
@@ -110,16 +127,22 @@ class UserController extends Controller
             $errors = $this->validationEnfant($validation,$errors,$post);
             if($validation->IsValid($errors)) {
                 ModelUser::insertEnfant($post);
-                $this->redirect('addEnfant');
+                $this->redirect('addEnfant/'.$_SESSION['prenom'].'');
             }
         }
 
 
         $form = new Form($errors);
         $this->render('app.user.mesEnfants',array(
-            'form'  => $form
-        ));
+            'form'  => $form,
+            'prenom' => $prenom,
+    ));
     }
+
+
+
+
+
 
 
 
