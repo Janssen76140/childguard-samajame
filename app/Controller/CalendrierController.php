@@ -9,13 +9,12 @@ use App\Weblitzer\Controller;
  */
 class CalendrierController extends Controller
 {
-    public function calendrier($id, $id_user, $prenom)
+    public function calendrier($prenom, $id)
 
     {
        // $this->afficherprenomEnfants($prenomEnfants);
         $this->render('app.calendrier.calendrier',array(
             'id'=>$id,
-            'id_user' =>$id_user,
             'prenom' => $prenom,
             //'prenomEnfants' => $prenomEnfants,
         ));
