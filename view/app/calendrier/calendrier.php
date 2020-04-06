@@ -1,9 +1,7 @@
 <?php
 
 
-
-
-?>
+use App\Controller\CalendrierController; ?>
 <style>
     #external-events {
         position: fixed;
@@ -62,7 +60,7 @@
             timeZone: 'UTC+1',
             header: {
                 left: 'prev,next today',
-                center: 'title', //+nom pro
+                center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
             editable: true,
@@ -75,14 +73,12 @@
     });
 </script>
 <div id='external-events'>
+
     <p>
-        <strong>Glissez vos réservations  <?= $prenom ?></strong>
+        <strong><?= $prenom ?>, glissez vos réservations pour <?= $nom ?></strong>
     </p>
-    <?php foreach ($prenomEnfants as $prenomEnfant){ ?>
 
-    <div class='fc-event'><?= $prenomEnfant ?>></div>
-
-    <?php } ?>
+    <?php (new App\Controller\CalendrierController)->afficherprenomEnfants($prenom); ?>
 
 </div>
 
