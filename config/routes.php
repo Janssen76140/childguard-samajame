@@ -7,12 +7,14 @@ $routes = array(
     array('single2','default','single2',array('id','slug')),
     array('inscription','user','inscription'),
     array('connexion','user','connexion'),
-    array('calendrier','calendrier','calendrier'),
-    array('addEnfant','user','addEnfant'),
+  
+    array('deconnexion','user','deconnexion'),
+    array('calendrier','calendrier','calendrier',array('prenom','id')),
+    array('addEnfant','user','addEnfant',array('prenom')),
     array('cgu', 'default', 'cgu'),
     array('mentions_legales', 'default','ml'),
 
-    array('listingPro','pro','listingPro'),
+    array('listingPro','pro','listingPro',array('prenom')),
 
     // articles
     array('articles','article','index'),
