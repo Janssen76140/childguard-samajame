@@ -12,6 +12,7 @@ $routes = array(
     array('calendrier','calendrier','calendrier',array('prenom','nom')),
     array('calendrier','calendrier','listingEnfantDuParent', array('$chi_iser_id_user')),
 
+    array('carte','carte','carte'),
     array('addEnfant','user','addEnfant',array('prenom')),
     array('cgu', 'default', 'cgu'),
     array('mentions_legales', 'default','ml'),
