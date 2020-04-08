@@ -8,6 +8,10 @@
     <link href='../../../../fullcalendar/packages/core/main.css' rel='stylesheet' type="text/css"/>
     <link href='../../../../fullcalendar/packages/daygrid/main.css' rel='stylesheet' type="text/css"/>
     <link href='../../../../fullcalendar/packages/timegrid/main.css' rel='stylesheet' type="text/css"/>
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+
     <script type="module" src="../../../../fullcalendar/packages/core/main.js"></script>
     <script type="module" src="../../../../fullcalendar/packages/daygrid/main.js"></script>
     <script type="module" src="../../../../fullcalendar/packages/interaction/main.js"></script>
