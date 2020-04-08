@@ -21,4 +21,10 @@
             trackUserLocation: true
         })
     );
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+    );
 </script>
