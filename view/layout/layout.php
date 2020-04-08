@@ -12,6 +12,10 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
 
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css"/>
+
     <script type="module" src="../../../../fullcalendar/packages/core/main.js"></script>
     <script type="module" src="../../../../fullcalendar/packages/daygrid/main.js"></script>
     <script type="module" src="../../../../fullcalendar/packages/interaction/main.js"></script>
