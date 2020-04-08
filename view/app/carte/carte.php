@@ -68,17 +68,19 @@
                 };
                 var i;
 
-                    let pros = <?php print_r($pros); ?>;
-                for(i=0; i<pros.length; i++){
+                let pros = <?php print_r($pros); ?>;
+
+            for(i=0; i<<?php echo array_key_last ($pros)+1; ?>; i++){
                     geojson.features.push({
                         type:'Feature',
                         geometry:{
                                     type: 'Point',
-                                    coordinates: [pros[i]['longitude'], pros[i]['latitude']],
+                                    coordinates: pros[i]['longitude'], pros[i]['latitude'],
                         },
                         properties:{
                             title: pros[i]['nom'],
                             description: '<p>Email: ' + pros[i]['email'] + '</p>' + '<p>Adresse: ' + pros[i]['adresse'] + '</p>',
+                            // essayer d'afficher depuis le tableau
                         }
 
                     })
