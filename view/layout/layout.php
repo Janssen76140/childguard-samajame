@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Childgard</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link href='../../../../fullcalendar/packages/core/main.css' rel='stylesheet' type="text/css"/>
     <link href='../../../../fullcalendar/packages/daygrid/main.css' rel='stylesheet' type="text/css"/>
     <link href='../../../../fullcalendar/packages/timegrid/main.css' rel='stylesheet' type="text/css"/>
