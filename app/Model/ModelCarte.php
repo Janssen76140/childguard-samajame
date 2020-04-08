@@ -10,6 +10,14 @@ class ModelCarte extends Model
 
 {
 
+    protected static $table = 'chi_pro';
+
+
+    public static function afficherPros()
+    {
+        Model::all();
+
+    }
 
 
 
