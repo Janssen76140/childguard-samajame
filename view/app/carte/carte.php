@@ -1,8 +1,18 @@
 <?php ?>
 
+<style> #marker {
+        background-image: url('https://image.shutterstock.com/image-vector/nursery-room-icon-vector-flat-260nw-1418621558.jpg');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }</style>
+
 <div class="clear"></div>
 <div id='map' style='width: 100%; height: 600px;margin-top: 150px;margin-bottom: 50px;'></div>
 <div class="clear"></div>
+
 
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiczRzNG0iLCJhIjoiY2s4cXp3OXg1MDRlMDNsdGxweHNyaGh0ZiJ9.cVEr5FCPeU4qpNREKvdIRA';
@@ -49,7 +59,8 @@
                         },
                         properties:{
                             title: 'maison Samuel',
-                            description: 'test en dure'
+                            description: 'test en dure',
+
                         }
 
                     }]
@@ -61,34 +72,37 @@
                         geometry:{
                                     type: 'Point',
                                     coordinates: <?php echo '['.$pro->longitude.', '. $pro->latitude.']'; ?>,
+
                         },
                         properties:{
                             title: <?php echo "'" .$pro->nom. "'"; ?>,
                             description: <?php echo "'". 'Email:'.  $pro->email .' '. 'Adresse: ' . $pro->adresse."'"; ?>,
-                            // essayer d'afficher depuis le tableau
+
                         }
 
                     });
+        var pro = <?php echo '[' . $pro->longitude . ', ' . $pro->latitude . ']'; ?>;
+        var message = <?php echo "'" . 'Email:' . $pro->email . ' ' . 'Adresse: ' . $pro->adresse . "'"; ?>;
+        var popup = new mapboxgl.Popup({offset: 25}).setText(
+            message
+        );
+        var el = document.createElement('div');
+        el.id = 'marker';
+
+// create the marker
+        new mapboxgl.Marker(el)
+            .setLngLat(pro)
+            .setPopup(popup) // sets a popup on this marker
+            .addTo(map);
                 <?php } ?>
-            });
-
-           geojson.features.forEach(function (marker) {
-
-               //Instantiation de l'image du pointeur également à gérer sur le style (mapbox.css)
-               // create a HTML element for each feature
-               var el = document.createElement('div');
-               el.className = 'marker';
 
 
-               // make a marker for each feature and add to the map
-               new mapboxgl.Marker(el)
-                   .setLngLat(marker.geometry.coordinates)
-                   .addTo(map)
-                   .setPopup(new mapboxgl.Popup({offset: 25}) // add popups
-                       .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-                   .addTo(map);
 
-           });
+
+    });
+
+
+
 
 
 
