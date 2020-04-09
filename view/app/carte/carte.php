@@ -66,25 +66,22 @@
 
                     }]
                 };
-                var i;
 
-                let pros = <?php print_r($pros); ?>;
-
-            for(i=0; i<<?php echo array_key_last ($pros)+1; ?>; i++){
+                <?php foreach ($pros as $pro){ ?>
                     geojson.features.push({
                         type:'Feature',
                         geometry:{
                                     type: 'Point',
-                                    coordinates: pros[i]['longitude'], pros[i]['latitude'],
+                                    coordinates: <?php echo '['.$pro->longitude.','. $pro->latitude.']'; ?>,
                         },
                         properties:{
-                            title: pros[i]['nom'],
-                            description: '<p>Email: ' + pros[i]['email'] + '</p>' + '<p>Adresse: ' + pros[i]['adresse'] + '</p>',
+                            title: <?php echo $pro->nom; ?>,
+                            description: <?php echo '<p>Email: '. $pro->email .'</p>' . '<p>Adresse: ' . $pro->adresse . '</p>'; ?>,
                             // essayer d'afficher depuis le tableau
                         }
 
-                    })
-                }
+                    });
+                <?php } ?>
             });
 
            geojson.features.forEach(function (marker) {
