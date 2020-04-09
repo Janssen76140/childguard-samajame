@@ -5,11 +5,11 @@ use App\Service\Form;
 
 ?>
 
-<h1> Bonjour <?php echo $prenom ?>, Inscription de votre enfant</h1>
+<h1 class="enfantTitre">Bonjour <?php echo $prenom ?>, inscription de votre enfant</h1>
 
 
 
-<form action="" method="post">
+<form class="formEnfant" action="" method="post">
     <?php
 
     echo $form->label('Nom :', 'nom');
@@ -47,7 +47,8 @@ use App\Service\Form;
     echo $form->textarea('regimeAlimentaire');
     echo $form->error('regimeAlimentaire');
 
-    echo $form->submit();
+
+    echo '<div class="submit">'.$form->submit().'</div>';
 
     ?>
 
