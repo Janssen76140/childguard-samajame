@@ -3,19 +3,7 @@
 <div class="clear"></div>
 <div id='map' style='width: 100%; height: 600px;margin-top: 150px;margin-bottom: 50px;'></div>
 <div class="clear"></div>
-<?php foreach($pros as $pro) { ?>
-    <tr>
-        <td><?= $pro->nom; ?></td>
-        <td><?= $pro->prix; ?> €/heure</td>
-        <td><?= $pro->email; ?></td>
-        <td><?= $pro->heureDebut; ?></td>
-        <td><?= $pro->heureFin; ?></td>
-        <td><?= $pro->adresse; ?></td>
-        <td>
-            <a>Voir</a>
-        </td>
-    </tr>
-<?php } ?>
+
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiczRzNG0iLCJhIjoiY2s4cXp3OXg1MDRlMDNsdGxweHNyaGh0ZiJ9.cVEr5FCPeU4qpNREKvdIRA';
 
@@ -72,11 +60,11 @@
                         type:'Feature',
                         geometry:{
                                     type: 'Point',
-                                    coordinates: <?php echo '['.$pro->longitude.','. $pro->latitude.']'; ?>,
+                                    coordinates: <?php echo '['.$pro->longitude.', '. $pro->latitude.']'; ?>,
                         },
                         properties:{
-                            title: <?php echo $pro->nom; ?>,
-                            description: <?php echo '<p>Email: '. $pro->email .'</p>' . '<p>Adresse: ' . $pro->adresse . '</p>'; ?>,
+                            title: <?php echo "'" .$pro->nom. "'"; ?>,
+                            description: <?php echo "'". 'Email:'.  $pro->email .' '. 'Adresse: ' . $pro->adresse."'"; ?>,
                             // essayer d'afficher depuis le tableau
                         }
 
