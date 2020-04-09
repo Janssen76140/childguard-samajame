@@ -4,7 +4,7 @@
         <div class="rechercheCreche">
 
             <p class="pres1">Trouver une place ?<br>Un jeu d'enfant !</p>
-            <form action="" method="get">
+            <form action="carte" method="get">
                 <div>
                     <input id="adresse_search" name="distance" value="" placeholder="Indiquez votre adresse"
                            type="text">
