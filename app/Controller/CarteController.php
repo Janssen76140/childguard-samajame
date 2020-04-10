@@ -26,9 +26,21 @@ class CarteController extends Controller
             'pros' => $pros,
 
         ));
+
         echo json_encode($pros);
     }
 
+    public function afficherLienPros($prenom)
 
+    {
+        $pros = ModelCarte::all();
+        $this->render('app.carte.carteUser',array(
+            'pros' => $pros,
+            'prenom' => $prenom,
+
+        ));
+
+        echo json_encode($pros);
+    }
 
 }
