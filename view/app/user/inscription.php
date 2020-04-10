@@ -38,7 +38,7 @@ use App\Service\Form;
     echo $form->label('téléphone', 'téléphone');
     echo $form->input('téléphone', 'tel');
 
-    echo $form->submit();
+    echo '<div class="submit">'.$form->submit().'</div>';
 
     ?>
 </form>

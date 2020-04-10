@@ -20,6 +20,7 @@ use App\Service\Form;
     echo $form->input('mdp', 'password');
     echo $form->error('mdp');
 
-    echo $form->submit();
+    echo '<div class="submit">'.$form->submit().'</div>';
+
     ?>
 </form>
