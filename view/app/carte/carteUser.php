@@ -83,10 +83,10 @@
         });
         var pro = <?php echo '[' . $pro->longitude . ', ' . $pro->latitude . ']'; ?>;
         <?php
-        //$message = '"'.'Email:' . $pro->email . ' ' . 'Adresse: ' . $pro->adresse;
-        $lien = '<a href="/childguard/public/calendrier/'.$prenom.'/'.$pro->nom.'">'.'cliquez ici'.'</a>';
+        $message = '<p>'.'Email:' . $pro->email . '<br /> ' . 'Adresse: ' . $pro->adresse.'</p>';
+        $lien = '<a href="/childguard/public/calendrier/'.$prenom.'/'.$pro->nom.'">'.'Le planning'.'</a>';
         ?>
-        var popup = new mapboxgl.Popup({offset: 25}).setText('<?php echo $lien ?>');
+        var popup = new mapboxgl.Popup({offset: 25}).setHTML('<?php echo $lien; echo $message ?>');
         var el = document.createElement('div');
         el.id = 'marker';
 
