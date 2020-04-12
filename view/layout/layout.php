@@ -98,21 +98,6 @@
 
 
 
-
-
-
-
-                <li><a href="<?= $view->path('calendrier'); ?>"> Reserver</a></li>
-                <li><a href="<?= $view->path('carteUser', array($prenom)); ?>">Trouver son professionnels</a></li>
-                <li><a href="<?= $view->path('listingPro', array($prenom)); ?>">Liste des professionnels</a></li>
-                <li><a href="<?= $view->path('deconnexion'); ?>">Déconnexion</a></li>
-            </ul>
-        </nav>
-    <?php } ?>
-
-
-
-
 <div class="container">
     <?= $content; ?>
 </div>
