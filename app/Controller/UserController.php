@@ -47,22 +47,25 @@ class UserController extends Controller
             if ($validation->IsValid($errors) == true) {
 
                 $chi_user = ModelUser::userConnexion($post['email']);
-                if($chi_user->email === $post['email'] && password_verify($post['mdp'], $chi_user->mdp)) {
+                if ($chi_user->email === $post['email'] && password_verify($post['mdp'], $chi_user->mdp)) {
                     $_SESSION['email'] = array(
-                        'id_user'    => $chi_user['id_user'],
-                        'nom'   => $chi_user['nom'],
-                        'prenom'=> $chi_user['prenom'],
+                        'id_user' => $chi_user['id_user'],
+                        'nom' => $chi_user['nom'],
+                        'prenom' => $chi_user['prenom'],
                         'email' => $chi_user['email'],
 
                     );
 
-                   // unset($_POST);
+                    // unset($_POST);
 
                 } else {
                     $errors['mdp'] = 'Mot de passe ou mail incorrect';
                 }
 
-            }$this->redirect('addEnfant/'.$chi_user -> prenom);
+            }
+            if ($chi_user->id_user = $chi_user->prenom) {
+                $this->redirect('addEnfant/' . $chi_user->prenom);
+            }
         }
         else {
             $errors['email'] = 'Error ';
