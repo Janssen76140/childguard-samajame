@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 
+use App\Model\ModelCalendrier;
 use App\Model\ModelUser;
 use App\Service\Form;
 use App\Service\Validation;
@@ -140,9 +141,25 @@ class UserController extends Controller
     ));
     }
 
+    public function mesEnfants($prenom)
+    {
 
 
+        $this->render('app.user.voirMesEnfants',array(
+            'prenom' => $prenom,
+        ));
+    }
 
+
+    public function afficherprenomEnfants($chi_user_id_user)
+    {
+        $prenomEnfants = ModelCalendrier::listingEnfantDuParent($chi_user_id_user);
+        foreach ($prenomEnfants as $prenomEnfant)
+        {
+            echo '<div>' .$prenomEnfant->prenom. '</div>';
+        }
+
+    }
 
 
 
