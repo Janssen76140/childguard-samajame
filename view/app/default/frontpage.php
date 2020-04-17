@@ -66,7 +66,7 @@
                     <img class="icone icone1" src="asset/img/creche.png" alt=""/>
                 </div>
                 <div class="divparaService">
-                    <p class="paraService paraService1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias expedita explicabo facere impedit ipsum maxime modi molestiae odio optio provident, quam qui quia quo quos saepe, suscipit tenetur totam. Quos!</p>
+                    <p class="paraService paraService1">Childguard, c’est une diversité de professionnels de la garde d’enfants: des crèches, des assistantes maternelles, des MAM (maison d’assistantes maternelles), regroupés sur un seul site pour faciliter la recherche des parents et responsables des bouts de choux!</p>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -75,8 +75,7 @@
                     <img class="icone" src="asset/img/geoloc.png" alt=""/>
                 </div>
                 <div class="divparaService">
-                    <p class="paraService paraService2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Cupiditate hic impedit incidunt iste laudantium minus optio possimus quia repellendus voluptatibus! Ad adipisci deleniti error esse numquam quod reiciendis reprehenderit vitae!</p>
+                    <p class="paraService paraService2">Childgard, c’est un système de géolocalisation rapide et fonctionnel, pour vous permettre de trouver le professionnel de la garde d’enfants le plus proche de votre domicile ou de votre lieu de travail!</p>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -88,7 +87,7 @@
                     <img class="icone" src="asset/img/geoloc.png" alt=""/>
                 </div>
                 <div class="divparaService">
-                    <p class="paraService paraService3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam assumenda at dolorum eveniet fugit ipsa minus numquam omnis possimus quia, quibusdam ratione rem, sed totam! Ab cupiditate nostrum sunt.</p>
+                    <p class="paraService paraService3">Childgard, c’est l’inclusion de toutes les différences, de toutes les particularités. Notre service vous permettra de trouver la structure adaptée aux besoins de votre enfant (allergies, handicaps divers...)</p>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -97,7 +96,7 @@
                     <img class="icone" src="asset/img/geoloc.png" alt=""/>
                 </div>
                 <div class="divparaService">
-                    <p class="paraService paraService4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium animi aspernatur culpa debitis deleniti doloribus esse est illo illum laboriosam nemo quae, quod recusandae reprehenderit veniam voluptate voluptatem</p>
+                    <p class="paraService paraService4">Childguard, c’est une facilité de paiement pratique pour les parents, et la possibilité pour les professionnels de faire directement des relances en cas d’impayés. Childgard, c’est facile, c’est utile, c’est pour vous!</p>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -112,7 +111,7 @@
                     <img class="iconeResponsive iconeResponsive1" src="asset/img/creche.png" alt=""/>
                 </div>
                 <div class="divparaServiceResponsive">
-                    <p class="paraServiceResponsive paraServiceResponsive1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias expedita explicabo facere impedit ipsum maxime modi molestiae odio optio provident, quam qui quia quo quos saepe, suscipit tenetur totam. Quos!</p>
+                    <p class="paraServiceResponsive paraServiceResponsive1">Childguard, c’est une diversité de professionnels de la garde d’enfants: des crèches, des assistantes maternelles, des MAM (maison d’assistantes maternelles), regroupés sur un seul site pour faciliter la recherche des parents et responsables des petits bouts de choux!</p>
                 </div>
 
             <div class="barreService"></div>
@@ -122,8 +121,7 @@
                     <img class="iconeResponsive" src="asset/img/geoloc.png" alt=""/>
                 </div>
                 <div class="divparaServiceResponsive">
-                    <p class="paraServiceResponsive paraServiceResponsive2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Cupiditate hic impedit incidunt iste laudantium minus optio possimus quia repellendus voluptatibus! Ad adipisci deleniti error esse numquam quod reiciendis reprehenderit vitae!</p>
+                    <p class="paraServiceResponsive paraServiceResponsive2">Childgard, c’est un système de géolocalisation rapide et fonctionnel, pour vous permettre de trouver le professionnel de la garde d’enfants le plus proche de votre domicile ou de votre lieu de travail!</p>
                 </div>
         </div>
 
@@ -134,7 +132,7 @@
                     <img class="iconeResponsive" src="asset/img/geoloc.png" alt=""/>
                 </div>
                 <div class="divparaServiceResponsive">
-                    <p class="paraServiceResponsive paraServiceResponsive3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam assumenda at dolorum eveniet fugit ipsa minus numquam omnis possimus quia, quibusdam ratione rem, sed totam! Ab cupiditate nostrum sunt.</p>
+                    <p class="paraServiceResponsive paraServiceResponsive3">Childgard, c’est l’inclusion de toutes les différences, de toutes les particularités. Notre service vous permettra de trouver la structure adaptée aux besoins de votre enfant (allergies, handicaps divers...)</p>
                 </div>
 
             <div class="barreService"></div>
@@ -143,7 +141,7 @@
                     <img class="iconeResponsive" src="asset/img/geoloc.png" alt=""/>
                 </div>
                 <div class="divparaServiceResponsive">
-                    <p class="paraServiceResponsive paraServiceResponsive4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium animi aspernatur culpa debitis deleniti doloribus esse est illo illum laboriosam nemo quae, quod recusandae reprehenderit veniam voluptate voluptatem</p>
+                    <p class="paraServiceResponsive paraServiceResponsive4">Childguard, c’est une facilité de paiement pratique pour les parents, et la possibilité pour les professionnels de faire directement des relances en cas d’impayés. Childgard, c’est facile, c’est utile, c’est pour vous!</p>
                 </div>
         </div>
     </div>

@@ -5,7 +5,8 @@ use App\Service\Form;
 
 ?>
 
-<h1 class="enfantTitre">Bonjour <?php echo $prenom ?>, inscription de votre enfant</h1>
+<h1 class="enfantTitre">Bonjour <?php echo $prenom ?>, inscription ou <a href="<?= $view->path('voirMesEnfants',array($prenom)); ?>">visualisation</a> de votre enfant  </h1>
+
 
 
 

@@ -59,8 +59,8 @@
 
             <nav>
                 <ul>
-                    <li><a href="<?= $view->path('mesEnfants') ?>" class="enfantsHeader">Mes enfants</a></li>
-                    <li><a href="<?= $view->path('listingPro') ?>" class="proHeader">Liste des professionnels</a></li>
+                    <li><a href="<?= $view->path('addEnfant', array($prenom)) ?>" class="enfantsHeader">Mes enfants</a></li>
+                    <li> <a href="<?= $view->path('carteUser', array($prenom)) ?>" class="proHeader">Choix du professionnel</a></li>
                     <li><a href="<?= $view->path('deconnexion') ?>" class="decoHeader">Déconnexion</a></li>
                 </ul>
             </nav>
@@ -81,8 +81,8 @@
 
                             <?php } else { ?>
 
-                                <a href="<?= $view->path('mesEnfants') ?>" class="lienBurger">Mes enfants</a></li>
-                                <a href="<?= $view->path('listingPro') ?>" class="lienBurger">Liste des professionnels</a>
+                                <a href="<?= $view->path('addEnfant', array($prenom)) ?>" class="lienBurger">Mes enfants</a>
+                                <a href="<?= $view->path('carteUser', array($prenom)) ?>" class="lienBurger">Choix du professionnel</a>
                                 <a href="<?= $view->path('deconnexion') ?>" class="lienBurger dernierLienBurger">Déconnexion</a>
 
                             <?php } ?>
@@ -94,6 +94,21 @@
                     </div>
                 </div>
 </header>
+
+
+
+
+
+
+
+
+
+                <li><a href="<?= $view->path('carteUser', array($prenom)); ?>">Trouver son professionnels</a></li>
+                <li><a href="<?= $view->path('addEnfant', array($prenom)) ?>" >Mes enfants</a></li>
+                <li><a href="<?= $view->path('deconnexion'); ?>">Déconnexion</a></li>
+            </ul>
+        </nav>
+
 
 
 
