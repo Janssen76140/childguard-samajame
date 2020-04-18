@@ -50,10 +50,6 @@ class UserController extends Controller
                 $chi_user = ModelUser::userConnexion($post['email']);
                 if ($chi_user->email === $post['email'] && password_verify($post['mdp'], $chi_user->mdp)) {
                     $_SESSION['email'] = array(
-                        'id_user' => $chi_user['id_user'],
-                        'nom' => $chi_user['nom'],
-                        'prenom' => $chi_user['prenom'],
-                        'email' => $chi_user['email'],
 
                     );
 
