@@ -26,7 +26,9 @@
 
         <div class="professionnel">
             <p class="pres2">Espace Pro</p>
-            <input id="pro" type="submit" name="submitted" value="C'est par ici !">
+            <div class="lienPro">
+                <a href="#" id="pro">C'est par ici !</a>
+            </div>
         </div>
 
 
@@ -84,7 +86,7 @@
         <div class="service2">
             <div class="orange">
                 <div class="imgService">
-                    <img class="icone" src="asset/img/geoloc.png" alt=""/>
+                    <img class="icone3" src="asset/img/handicone.png" alt=""/>
                 </div>
                 <div class="divparaService">
                     <p class="paraService paraService3">Childgard, c’est l’inclusion de toutes les différences, de toutes les particularités. Notre service vous permettra de trouver la structure adaptée aux besoins de votre enfant (allergies, handicaps divers...)</p>
@@ -93,7 +95,7 @@
             </div>
             <div class="vert">
                 <div class="imgService">
-                    <img class="icone" src="asset/img/geoloc.png" alt=""/>
+                    <img class="icone4" src="asset/img/facticone.png" alt=""/>
                 </div>
                 <div class="divparaService">
                     <p class="paraService paraService4">Childguard, c’est une facilité de paiement pratique pour les parents, et la possibilité pour les professionnels de faire directement des relances en cas d’impayés. Childgard, c’est facile, c’est utile, c’est pour vous!</p>
@@ -129,7 +131,7 @@
 
         <div class="service2Responsive">
                 <div class="imgServiceResponsive">
-                    <img class="iconeResponsive" src="asset/img/geoloc.png" alt=""/>
+                    <img class="iconeResponsive" src="asset/img/handicone.png" alt=""/>
                 </div>
                 <div class="divparaServiceResponsive">
                     <p class="paraServiceResponsive paraServiceResponsive3">Childgard, c’est l’inclusion de toutes les différences, de toutes les particularités. Notre service vous permettra de trouver la structure adaptée aux besoins de votre enfant (allergies, handicaps divers...)</p>
@@ -138,7 +140,7 @@
             <div class="barreService"></div>
             
                 <div class="imgServiceResponsive">
-                    <img class="iconeResponsive" src="asset/img/geoloc.png" alt=""/>
+                    <img class="iconeResponsive" src="asset/img/facticone.png" alt=""/>
                 </div>
                 <div class="divparaServiceResponsive">
                     <p class="paraServiceResponsive paraServiceResponsive4">Childguard, c’est une facilité de paiement pratique pour les parents, et la possibilité pour les professionnels de faire directement des relances en cas d’impayés. Childgard, c’est facile, c’est utile, c’est pour vous!</p>
