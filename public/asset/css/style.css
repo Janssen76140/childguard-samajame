@@ -403,21 +403,6 @@ select {
     border: 1.5px solid lightcoral;
 }
 
-.professionnel input[type="submit"] {
-    background: white;
-    border: 0.5px lightcoral solid;
-    padding: 6px 30px;
-    font-size: 1.3em;
-    border-radius: 20px;
-    color: lightcoral;
-    cursor: pointer;
-}
-
-.professionnel input[type="submit"]:hover {
-    background: lightcoral;
-    color: white;
-}
-
 .pres2 {
     color: lightcoral;
     text-align: center;
@@ -426,8 +411,25 @@ select {
 }
 
 #pro {
-    margin-top: 50px;
-    margin-left: 16%;
+    margin-left: 11.5%;
+    margin-top: 100px;
+    background: white;
+    border: 0.5px lightcoral solid;
+    padding: 6px 30px;
+    font-size: 1.3em;
+    border-radius: 20px;
+    color: lightcoral;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.professionnel .lienPro {
+    margin-top: 70px;
+}
+
+#pro:hover {
+    background: lightcoral;
+    color: white;
 }
 
 #section2Homepage {
@@ -443,6 +445,12 @@ select {
 
 .icone1 {
     margin-top: 40px;
+}
+
+.icone3, .icone4 {
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .nosServices {
