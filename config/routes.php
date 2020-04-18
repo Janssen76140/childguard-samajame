@@ -13,7 +13,9 @@ $routes = array(
     array('calendrier','calendrier','listingEnfantDuParent', array('$chi_user_id_user')),
 
     array('carte','carte','afficherPros'),
+    array('carteUser','carte','afficherLienPros',array('prenom')),
     array('addEnfant','user','addEnfant',array('prenom')),
+    array('voirMesEnfants','user','mesEnfants', array('prenom')),
     array('cgu', 'default', 'cgu'),
     array('mentions_legales', 'default','ml'),
 
