@@ -10,7 +10,7 @@ $routes = array(
   
     array('deconnexion','user','deconnexion'),
     array('calendrier','calendrier','calendrier',array('prenom','nom')),
-    array('calendrier','calendrier','listingEnfantDuParent', array('$chi_iser_id_user')),
+    array('calendrier','calendrier','listingEnfantDuParent', array('$chi_user_id_user')),
 
     array('carte','carte','afficherPros'),
     array('carteUser','carte','afficherLienPros',array('prenom')),
@@ -21,6 +21,7 @@ $routes = array(
 
     array('listingPro','pro','listingPro',array('prenom')),
 
+    array('facturation', 'facture', 'afficherUser',array('$prenom')),
     // articles
     array('articles','article','index'),
 
