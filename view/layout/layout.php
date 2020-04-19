@@ -57,7 +57,7 @@
             <ul>
                 <li><a href="<?= $view->path('mesEnfants') ?>" class="enfantsHeader">Mes enfants</a></li>
                 <li><a href="<?= $view->path('carteUser', array($prenom)); ?>" class="proHeader">Trouver son
-                        professionnels</a></li>
+                        professionnel</a></li>
                 <li><a href="<?= $view->path('deconnexion') ?>" class="decoHeader">Déconnexion</a></li>
             </ul>
         </nav>
@@ -82,7 +82,7 @@
 
                     <a href="<?= $view->path('mesEnfants') ?>" class="lienBurger">Mes enfants</a>
                     <a href="<?= $view->path('carteUser', array($prenom)); ?>" class="lienBurger">Trouver son
-                        professionnels</a>
+                        professionnel</a>
                     <a href="<?= $view->path('deconnexion') ?>" class="lienBurger dernierLienBurger">Déconnexion</a>
 
                 <?php } ?>

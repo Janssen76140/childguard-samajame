@@ -20,6 +20,7 @@ use App\Controller\CalendrierController; ?>
     }
 
     #calendar-container {
+        padding-top: 150px;
         position: relative;
         z-index: 1;
         margin-left: 200px;
