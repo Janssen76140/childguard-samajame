@@ -55,7 +55,7 @@
 
         <nav>
             <ul>
-                <li><a href="<?= $view->path('mesEnfants' array($prenom)) ?>" class="enfantsHeader">Mes enfants</a></li>
+                <li><a href="<?= $view->path('addEnfant' array($prenom)) ?>" class="enfantsHeader">Mes enfants</a></li>
                 <li><a href="<?= $view->path('carteUser', array($prenom)); ?>" class="proHeader">Trouver son
                         professionnel</a></li>
                 <li><a href="<?= $view->path('deconnexion') ?>" class="decoHeader">Déconnexion</a></li>
@@ -80,7 +80,7 @@
 
                 <?php } else { ?>
 
-                    <a href="<?= $view->path('mesEnfants' array($prenom)) ?>" class="lienBurger">Mes enfants</a>
+                    <a href="<?= $view->path('addEnfant' array($prenom)) ?>" class="lienBurger">Mes enfants</a>
                     <a href="<?= $view->path('carteUser', array($prenom)); ?>" class="lienBurger">Trouver son
                         professionnel</a>
                     <a href="<?= $view->path('deconnexion') ?>" class="lienBurger dernierLienBurger">Déconnexion</a>
